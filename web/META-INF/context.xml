@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context auth="Container">
+    <Resource
+            name="jdbc/dailyquizpool"
+            type="javax.sql.DataSource"
+            factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+            jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+            url="jdbc:mysql://localhost:3306/dailyquiz"
+            driverClassName="com.mysql.jdbc.Driver"
+            username="root"
+            password="ROOT"
+            maxActive="100"
+            maxIdle="20"/>
+    <!--maxActive –> Número máximo de conexões ativas no pool-->
+    <!--maxIdle –> Número máximo de conexões inativas no pool-->
+</Context>

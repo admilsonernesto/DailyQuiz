@@ -14,4 +14,17 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <!--Configuração Pool de Conexões gerenciado pelo TomCat-->
+    <resource-ref>
+        <res-ref-name>
+            jdbc/dailyquizpool
+        </res-ref-name>
+        <res-type>
+            javax.sql.DataSource
+        </res-type>
+        <res-auth>
+            Container
+        </res-auth>
+    </resource-ref>
+
 </web-app>

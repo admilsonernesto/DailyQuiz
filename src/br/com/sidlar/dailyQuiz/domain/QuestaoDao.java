@@ -2,7 +2,6 @@ package br.com.sidlar.dailyQuiz.domain;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -13,8 +12,9 @@ public class QuestaoDao {
     private Connection connection;
 
     public QuestaoDao() {
-        this.connection = new ConnectionFactory().getConnectionMySql();
+        this.connection = new ConnectionFactory().getConexao();
     }
+
 
     public Questao buscaQuestaoDivulgadaEm(Date dataDivulgacao) throws SQLException {
         String sql = "select * from questao as q join alternativa as a on q.id = a.idQuestao where dataDivulgacao=?";
